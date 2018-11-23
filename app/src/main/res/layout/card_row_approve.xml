@@ -1,0 +1,288 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/txt_opac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/txt_work_cntr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/s_name_approve"
+        app:layout_constraintTop_toBottomOf="@+id/s_name_approve"
+        tools:ignore="MissingConstraints" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_plant"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="TextView"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txt_work_cntr"-->
+    <!--tools:ignore="UnknownId" />-->
+
+    <TextView
+        android:id="@+id/txt_cont_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_operation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:ignore="MissingConstraints" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_time_work"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="TextView"-->
+    <!--tools:layout_editor_absoluteX="518dp"-->
+    <!--tools:layout_editor_absoluteY="129dp" />-->
+
+    <TextView
+        android:id="@+id/txt_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_start_date"
+        app:layout_constraintStart_toEndOf="@+id/txt_start_date"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_end_date"
+        app:layout_constraintStart_toEndOf="@+id/txt_end_date"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/txt_sta"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/cw_button_shadow"
+        android:stateListAnimator="@null"
+        android:text="สรุปงานแล้ว"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_work_cntr"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/txt_sta2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/cw_button_shadowred"
+        android:stateListAnimator="@null"
+        android:text="ยังไม่สรุปงาน"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_work_cntr"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="16dp"
+        android:text="เริ่มซ่อม"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_operation" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="155dp"
+        android:layout_marginStart="155dp"
+        android:text="ซ่อมเสร็จ"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:text="Operation"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView28"
+        app:layout_constraintStart_toEndOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:text="Control Key"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:text="Operation Text"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/s_name_approve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Name"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Work Cntr"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout><!--<?xml version="1.0" encoding="utf-8"?>--><!--<android.support.v7.widget.CardView--><!--xmlns:card_view="http://schemas.android.com/apk/res-auto"--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="5dp"--><!--android:layout_marginLeft="5dp"--><!--android:layout_marginRight="5dp"--><!--card_view:cardCornerRadius="5dp">-->
+
+    <!--<android.support.constraint.ConstraintLayout--><!--android:id="@+id/con_dialog"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout--><!--android:id="@+id/linearLayout_status"--><!--android:layout_width="170dp"--><!--android:layout_height="41dp"--><!--android:layout_marginEnd="390dp"--><!--android:layout_marginRight="390dp"--><!--android:orientation="horizontal"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<TextView--><!--android:id="@+id/appr_nextcode"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="1"--><!--android:padding="8dp"--><!--android:text="Status"--><!--android:textSize="18sp"--><!--android:textStyle="bold"--><!--tools:layout_editor_absoluteX="282dp"--><!--tools:layout_editor_absoluteY="8dp" />--><!--</LinearLayout>-->
+
+    <!--<TextView--><!--android:id="@+id/txt_time"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="182dp"--><!--android:layout_marginLeft="32dp"--><!--android:layout_marginRight="182dp"--><!--android:layout_marginStart="32dp"--><!--android:layout_marginTop="8dp"--><!--android:text="เวลา : "--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/linearLayout_status" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_appr_name"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="250dp"--><!--android:layout_marginLeft="100dp"--><!--android:layout_marginRight="250dp"--><!--android:layout_marginStart="100dp"--><!--android:text="โดย  : "--><!--card_view:layout_constraintBaseline_toBaselineOf="@+id/txtResult"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.01"--><!--card_view:layout_constraintStart_toEndOf="@+id/txtResult" />-->
+
+
+    <!--<TextView--><!--android:id="@+id/txtResult"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginRight="8dp"--><!--android:text="result"--><!--card_view:layout_constraintBaseline_toBaselineOf="@+id/txt_time"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.015"--><!--card_view:layout_constraintStart_toEndOf="@+id/txt_time" />-->
+
+    <!--<TextView--><!--android:id="@+id/appr_name"--><!--android:layout_width="wrap_content"--><!--android:layout_height="18dp"--><!--android:text="name"--><!--card_view:layout_constraintBaseline_toBaselineOf="@+id/txt_appr_name"--><!--card_view:layout_constraintStart_toEndOf="@+id/txt_appr_name"--><!--tools:ignore="MissingConstraints" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_view1"--><!--android:layout_width="0dp"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="16dp"--><!--android:layout_marginLeft="32dp"--><!--android:layout_marginStart="32dp"--><!--android:layout_marginTop="8dp"--><!--card_view:layout_constraintBottom_toBottomOf="parent"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_time" />-->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>--><!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginTop="5dp"--><!--android:layout_marginLeft="5dp"--><!--android:layout_marginRight="5dp"--><!--card_view:cardCornerRadius="5dp">-->
+
+    <!--<android.support.constraint.ConstraintLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+
+    <!--<TextView--><!--android:id="@+id/txt_opac"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="8dp"--><!--android:layout_marginStart="8dp"--><!--android:text="TextView"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--<TextView--><!--android:id="@+id/txt_work_cntr"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="8dp"--><!--android:layout_marginStart="8dp"--><!--android:text="TextView"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_opac" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_plant"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="8dp"--><!--android:layout_marginStart="8dp"--><!--android:text="TextView"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_work_cntr" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_cont_key"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="8dp"--><!--android:layout_marginStart="8dp"--><!--android:text="TextView"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_plant" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_operation"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="8dp"--><!--android:layout_marginStart="8dp"--><!--android:text="TextView"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_cont_key" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_time_work"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="8dp"--><!--android:layout_marginStart="8dp"--><!--android:text="TextView"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_operation" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_start_date"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginLeft="250dp"--><!--android:layout_marginRight="8dp"--><!--android:layout_marginStart="250dp"--><!--android:text="TextView"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_start_time"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginLeft="250dp"--><!--android:layout_marginRight="8dp"--><!--android:layout_marginStart="250dp"--><!--android:text="TextView"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_start_date" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_end_date"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginLeft="250dp"--><!--android:layout_marginRight="8dp"--><!--android:layout_marginStart="250dp"--><!--android:text="TextView"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_start_time" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_end_time"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginLeft="250dp"--><!--android:layout_marginRight="8dp"--><!--android:layout_marginStart="250dp"--><!--android:text="TextView"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_end_date" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_sta"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginLeft="250dp"--><!--android:layout_marginRight="8dp"--><!--android:layout_marginStart="250dp"--><!--android:layout_marginTop="16dp"--><!--android:text="TextView"--><!--card_view:layout_constraintBottom_toBottomOf="parent"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintHorizontal_bias="0.0"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toBottomOf="@+id/txt_end_time" />-->
+
+    <!--<android.support.constraint.Guideline--><!--android:id="@+id/guideline"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="110dp"--><!--android:layout_marginEnd="173dp"--><!--android:layout_marginLeft="200dp"--><!--android:layout_marginRight="173dp"--><!--android:layout_marginStart="200dp"--><!--android:orientation="vertical"--><!--card_view:layout_constraintBottom_toBottomOf="parent"--><!--card_view:layout_constraintEnd_toEndOf="parent"--><!--card_view:layout_constraintGuide_begin="200dp"--><!--card_view:layout_constraintStart_toStartOf="parent"--><!--card_view:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->

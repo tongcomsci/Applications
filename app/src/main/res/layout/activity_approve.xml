@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="8dp"
+    tools:context=".ApproveActiviry">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/strokeheaddesc"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ความเรียบร้อย"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/strokedesc"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+        <TextView
+            android:id="@+id/txt_dev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dev"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView41"
+            app:layout_constraintStart_toEndOf="@+id/textView41" />
+
+        <TextView
+            android:id="@+id/txt_app_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView39"
+            app:layout_constraintStart_toEndOf="@+id/textView39" />
+
+        <TextView
+            android:id="@+id/txt_type_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type_order"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView37"
+            app:layout_constraintStart_toEndOf="@+id/textView37" />
+
+        <TextView
+            android:id="@+id/txt_s_notifi_equip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="equip"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView45" />
+
+        <TextView
+            android:id="@+id/txt_appr_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tel"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView46"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView46" />
+
+        <TextView
+            android:id="@+id/txt_order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="order_id"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView36"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/txt_s_notifi_func"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="func"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView42"
+            app:layout_constraintStart_toEndOf="@+id/textView42" />
+
+        <TextView
+            android:id="@+id/txt_notif_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="notif_id"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView35"
+            app:layout_constraintStart_toEndOf="@+id/textView35" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView38"
+            app:layout_constraintStart_toEndOf="@+id/textView38" />
+
+        <TextView
+            android:id="@+id/txt_noti_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="noti_type"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView44"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView44" />
+
+        <TextView
+            android:id="@+id/txt_notifi_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView43"
+            app:layout_constraintStart_toEndOf="@+id/textView43" />
+
+        <TextView
+            android:id="@+id/txt_name_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="create"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView40"
+            app:layout_constraintStart_toEndOf="@+id/textView40" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="เลขที่ใบแจ้งซ่อม : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
+            android:text="เลขที่ออเดอร์ : "
+            android:textColor="#000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_notif_id"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="ชนิดออเดอร์ : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="เหตุขัดข้อง/อาการ : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="รายละเอียดเพิ่มเติม : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="ผู้สร้าง : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_app_detail" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="หน่วยงาน : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="พื้นที่แจ้งอุกรณ์ : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="วันที่สร้าง : "
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
+            android:text="กลุ่มงาน : "
+            android:textColor="#000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView41"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
+            android:text="อุปกรณ์ที่แจ้ง : "
+            android:textColor="#000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView42"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
+            android:text="เบอร์ติดต่อ : "
+            android:textColor="#000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView43"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/strokeheaddesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="รายละเอียดเกี่ยวกับใบแจ้งซ่อม"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:text="สถานะปัจจุบัน ►"
+            android:textColor="#fff"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
+            app:layout_constraintStart_toEndOf="@+id/textView18" />
+
+        <Button
+            android:id="@+id/textView34"
+            android:layout_width="67dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@color/green"
+            android:stateListAnimator="@null"
+            android:text="confrim"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+            app:layout_constraintStart_toEndOf="@+id/textView31" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/strokeheaddesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textViewdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Operation List"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--style="@style/text_style"-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="269dp"
+        android:background="@drawable/strokedesc"
+        android:padding="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+        tools:context=".MainActivity"
+        tools:ignore="MissingConstraints"
+        tools:showIn="@layout/app_bar_main">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/card_recycler_approve"
+            android:layout_width="562dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--style="@style/text_style"-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@drawable/strokedesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+        tools:ignore="MissingConstraints">
+
+        <RadioGroup
+            android:id="@+id/radioGroupapprove"
+            android:layout_width="597dp"
+            android:layout_height="116dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ความเรียบร้อยและความถูกต้องของใบแจ้งซ่อมนี้"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" (กรณีเลือกหัวข้อ ไม่เรียบร้อย ใบแจ้งซ่อมจะถูกส่งกลับไปยังสถานะ Planning )"
+                android:textColor="@color/red"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="37dp" />
+
+            <RadioButton
+                android:id="@+id/success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="เรียบร้อย"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/unsuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ไม่เรียบร้อย"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_cancel_approve"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:text="ยกเลิก"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_approve"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:text="Approve"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_cancel_approve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel_approve" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="129dp"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:text="     Description"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_marginTop="1dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:stretchColumns="1">
+
+                <TextView
+                    android:id="@+id/txt_input_desc"
+                    style="@style/text_stylebox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintVertical_bias="0.04000002" />
+
+            </TableLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
