@@ -1,37 +1,32 @@
 package com.example.supachai_tong.login;
 
-import android.app.Dialog;
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.example.supachai_tong.login.Modal.AndroidVersion;
-import com.example.supachai_tong.login.Modal.notification;
+import com.example.supachai_tong.login.Modal.model_notification;
+import com.example.supachai_tong.login.Modal.notifications;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DataAdapter_Notifi extends RecyclerView.Adapter<DataAdapter_Notifi.ViewHolder> {
     //    private List<notification> list = new ArrayList<>();
-    private ArrayList<notification> android;
+    private ArrayList<model_notification> android;
     SharedPreferences.Editor editor;
     SharedPreferences shared;
     private Context context;
     private Thread mThread;
 
-    public DataAdapter_Notifi(ArrayList<notification> android) {
+    public DataAdapter_Notifi(ArrayList<model_notification> android) {
         this.android = android;
     }
 

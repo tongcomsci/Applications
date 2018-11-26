@@ -1,11 +1,9 @@
 package com.example.supachai_tong.login;
 
-import android.app.Notification;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -14,21 +12,13 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.supachai_tong.login.Modal.AndroidVersion;
-import com.example.supachai_tong.login.Modal.Cancel_Changwork;
-import com.example.supachai_tong.login.Modal.JSONResponse;
-import com.example.supachai_tong.login.Modal.approve;
-import com.example.supachai_tong.login.Modal.notification;
+import com.example.supachai_tong.login.Modal.alert;
+import com.example.supachai_tong.login.Modal.model_notification;
+import com.example.supachai_tong.login.Modal.notifications;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,11 +26,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.example.supachai_tong.login.App.CHANNEL_ID;
-
 public class NotificationActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private ArrayList<notification> data;
+    private ArrayList<model_notification> data;
     private DataAdapter_Notifi adapter;
     SharedPreferences.Editor editor;
     SharedPreferences shared;
@@ -65,6 +53,7 @@ public class NotificationActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_menu) {
+            load_alert();
             Intent intent = new Intent(this, MainActivity.class);
             finish();
             startActivity(intent);
@@ -73,7 +62,30 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     public void onBackPressed() {
+        load_alert();
         finish();
+    }
+
+
+    private void load_alert(){
+        String string_uname = shared.getString("uname", null);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://lionproduction.sli")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        Requestlnterface_data request = retrofit.create(Requestlnterface_data.class);
+        Call<alert> call = request.Callalert("getupdate_alert",string_uname);
+        call.enqueue(new Callback<alert>() {
+            @Override
+            public void onResponse(Call<alert> call, Response<alert> response) {
+                Log.w("Test", "true");
+            }
+            @Override
+            public void onFailure(Call<alert> call, Throwable t) {
+                Log.w("Test", "error " +t);
+            }
+        });
+
     }
 
     private void initRecyclerView() {
@@ -89,11 +101,13 @@ public class NotificationActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         mThread.interrupt();
+        load_alert();
     }
 
     public void onPause() {
         super.onPause();
         mThread.interrupt();
+        load_alert();
     }
 
     private void initViews() {
@@ -123,18 +137,18 @@ public class NotificationActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         Requestlnterface_data request = retrofit.create(Requestlnterface_data.class);
-        Call<JSONResponse> call = request.Callnotification("getnotification",uname,"1");
-        call.enqueue(new Callback<JSONResponse>() {
+        Call<notifications> call = request.Callnotification("getnotification",uname,"1");
+        call.enqueue(new Callback<notifications>() {
             @Override
-            public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
+            public void onResponse(Call<notifications> call, Response<notifications> response) {
                 Log.w("Test", "true");
-                JSONResponse jsonResponse = response.body();
+                notifications jsonResponse = response.body();
                 data = new ArrayList<>(Arrays.asList(jsonResponse.getNotification()));
                 adapter = new DataAdapter_Notifi(data);
                 recyclerView.setAdapter(adapter);
             }
             @Override
-            public void onFailure(Call<JSONResponse> call, Throwable t) {
+            public void onFailure(Call<notifications> call, Throwable t) {
                 Log.w("Test", "error Notifi" +t);
 
             }

@@ -11,9 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.example.supachai_tong.login.Modal.notification;
-
-import java.util.List;
+import com.example.supachai_tong.login.Modal.notifications;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -58,29 +56,43 @@ public class ExampleService extends Service {
                                 .addConverterFactory(GsonConverterFactory.create())
                                 .build();
                         Requestlnterface_data request = retrofit.create(Requestlnterface_data.class);
-                        Call<notification> call = request.Callnotificationservice("getnotification",string_uname,"1");
-                        call.enqueue(new Callback<notification>() {
+                        Call<notifications> call = request.Callnotificationservice("getnotification",string_uname,"1");
+                        call.enqueue(new Callback<notifications>() {
                             @Override
-                            public void onResponse(Call<notification> call, Response<notification> response) {
+                            public void onResponse(Call<notifications> call, Response<notifications> response) {
                                 if (response.isSuccess()) {
-                                    notification row_item = response.body();
 
-//                                    Log.w("Test", "size = 1");
-                                    Notification notification_load = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                                            .setContentTitle("Example Service")
-                                            .setContentText("มีใบแจ้งซ่อมใหม่")
-                                            .setSmallIcon(R.drawable.ic_android)
-                                            .setContentIntent(pendingIntent)
-                                            .build();
+                                    String row_item = String.valueOf(response.body().getNotification().length);
 
-                                    startForeground(1, notification_load);
+                                    Log.w("Test", "row_item = "+row_item);
+                                    editor.putString("row_item", String.valueOf(row_item));
+
+
+
+                                    Log.w("Test", "row_item = "+response.body().getNotification().length);
+                                    if (row_item.equals("0")){
+                                        Log.w("Test", "size = 0");
+                                        Intent serviceIntent = new Intent(ExampleService.this, ExampleService.class);
+                                        stopService(serviceIntent);
+                                    }else {
+                                        Log.w("Test", "size = 1");
+                                        Notification notification_load = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                                                .setContentTitle("มีใบแจ้งซ่อมที่รอการอนุมัติ")
+                                                .setSmallIcon(R.mipmap.ic_mt_workorder)
+                                                .setContentIntent(pendingIntent)
+                                                .build();
+
+                                        startForeground(1, notification_load);
 ////                                stopSelf();
+                                    }
+
+//
 
                                 }
                             }
 
                             @Override
-                            public void onFailure(Call<notification> call, Throwable t) {
+                            public void onFailure(Call<notifications> call, Throwable t) {
                                 Log.w("Test", "error Service");
 
                             }

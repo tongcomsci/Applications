@@ -8,8 +8,8 @@ import com.example.supachai_tong.login.Modal.Confirm_Changwork;
 import com.example.supachai_tong.login.Modal.Confirm_Changwork_pre;
 import com.example.supachai_tong.login.Modal.Confirm_Changwork_pre_tag;
 import com.example.supachai_tong.login.Modal.Confirm_Changwork_tag;
-import com.example.supachai_tong.login.Modal.JSONResponse;
 import com.example.supachai_tong.login.Modal.Viewinfo;
+import com.example.supachai_tong.login.Modal.alert;
 import com.example.supachai_tong.login.Modal.approve;
 import com.example.supachai_tong.login.Modal.approve_true;
 import com.example.supachai_tong.login.Modal.assign;
@@ -17,7 +17,7 @@ import com.example.supachai_tong.login.Modal.core;
 import com.example.supachai_tong.login.Modal.noreject;
 import com.example.supachai_tong.login.Modal.notifi;
 import com.example.supachai_tong.login.Modal.approve_false;
-import com.example.supachai_tong.login.Modal.notification;
+import com.example.supachai_tong.login.Modal.notifications;
 import com.example.supachai_tong.login.Modal.reject;
 import com.example.supachai_tong.login.Modal.savechangepre;
 
@@ -48,15 +48,21 @@ public interface Requestlnterface_data {
 
     @FormUrlEncoded
     @POST("/pdmis/include/sap/components/android/core.php")
-    Call<JSONResponse> Callnotification(@Field("flag") String flag,
+    Call<notifications> Callnotification(@Field("flag") String flag,
                                         @Field("uname") String uname,
                                         @Field("special") String special);
 
+
     @FormUrlEncoded
     @POST("/pdmis/include/sap/components/android/core.php")
-    Call<notification> Callnotificationservice(@Field("flag") String flag,
-                                               @Field("uname") String uname,
-                                               @Field("special") String special);
+    Call<alert> Callalert(@Field("flag") String flag,
+                          @Field("uname") String uname);
+
+    @FormUrlEncoded
+    @POST("/pdmis/include/sap/components/android/core.php")
+    Call<notifications> Callnotificationservice(@Field("flag") String flag,
+                                                @Field("uname") String uname,
+                                                @Field("special") String special);
 
 
     @FormUrlEncoded

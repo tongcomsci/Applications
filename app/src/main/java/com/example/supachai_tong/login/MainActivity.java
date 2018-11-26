@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
     TextView btn_date, btn_date2;
     String datebegin, dateend, stringValue_dev, stringValue_noti, stringValue_s_noti, stringValue_appr_nextcode, stringValue_datebegin, stringValue_dateend, stringassign_to;
     boolean booleanValue;
-    String str_dev_v1, str_noti_type, str_s_notifi, str_appr_nextcode;
+    String str_dev_v1, str_noti_type, str_s_notifi, str_appr_nextcode,row_shared;
     String desc_app, string_name, string_uname, string_img;
     private Menu menu_action;
     private MenuItem menuItem;
@@ -124,6 +124,9 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        row_shared = shared.getString("row_item", "0");
+        Log.w("item",row_shared);
 
         getShare();
 
@@ -386,7 +389,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         // SearchPopUp
-        if (id == R.id.action_notification) {
+
+
+        if (id == R.id.action_notification && Integer.parseInt(row_shared) != 0) {
             Intent intent = new Intent(this, NotificationActivity.class);
             startActivity(intent);
 
